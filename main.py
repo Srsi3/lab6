@@ -12,20 +12,18 @@ def encoder(word):
                 thing += '2'
     return thing
     pass
-def decoder(word):
+def decoder():
     bruh = ''
     return bruh
     pass
 if __name__  == '__main__':
     while True:
-        print("Menu\n---------\n0. Exit\n1. Encode\n2. Decode")
-        choice = int(input("Choose an option: "))
+        print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit")
+        choice = int(input("Please enter an option: "))
         if choice == 1:
-            print(f"The Encoded password is "+encoder(input("Password to Encode:")))
-
+            origi = encoder(input("Please enter your password to encode: "))
+            print("Your password has been encoded and stored!")
         elif choice == 2:
-            print(f"The Decoded password is "+decoder(input("Password to Decode:")))
-
-        elif choice == 0:
+            print(f"The encoded password is {origi}, and the original password is {decoder(origi)}.")
+        elif choice == 3:
             break
-
